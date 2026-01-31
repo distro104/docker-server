@@ -2,3 +2,6 @@
 /data/*
 !/data/index.php
 !/data/.gitkeep
+
+/php/public/*
+!/php/puclic/index.php
