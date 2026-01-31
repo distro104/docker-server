@@ -1,3 +1,4 @@
 # Config
 /data/*
 !/data/index.php
+!/data/.gitkeep
