@@ -7,9 +7,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf 
-      # - .:/var/www
-      # - .:/nginx/sites:/etc/nginx/conf.d
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
 
   # php
   php:
@@ -17,3 +15,18 @@ services:
     container_name: app_php
     volumes:
       - ./php/public/:/var/www/html/public
+
+  # Database: MariaDb
+  db:
+    image: mariadb:latest
+    container_name: app_db
+    ports:
+      - "3306:3306"
+    restart: unless-stopped
+    volumes:
+      - ./data:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: secret
+      MARIADB_DATABASE: laravel
+      MARIADB_USER: laravel
+      MARIADB_PASSWORD: secret
