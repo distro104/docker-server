@@ -3,5 +3,8 @@
 !/data/index.php
 !/data/.gitkeep
 
+
+/php/*
+!/php/Dockerfile
 /php/public/*
 !/php/puclic/index.php
