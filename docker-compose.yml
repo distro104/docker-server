@@ -6,9 +6,10 @@ services:
       context: ./php
     container_name: app_php
     volumes:
-      - ./www:/var/www/html/public
+      - ./php/public:/var/www/html/public
     networks:
       - app_network
+    restart: unless-stopped
 
   # server
   webserver:
@@ -16,13 +17,14 @@ services:
     container_name: app_nginx
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./www:/var/www/html/public
+      - ./php/public:/var/www/html/public
     ports:
       - "80:80"
     depends_on:
       - php
     networks:
       - app_network
+    # restart: unless-stopped
 
   # Database: MariaDb
   db:

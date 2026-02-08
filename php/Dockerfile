@@ -1,9 +1,9 @@
-FROM php:8.4-cli
+FROM php:8.4-fpm
 
 # Dependências do sistema
 RUN apt-get update && apt-get install -y \
-git \
 curl \
+git \
 zip \
 unzip \
 bash \
@@ -20,15 +20,25 @@ nodejs \
 npm \
 gcc g++ make
 
+# Extencoes do PHP
+COPY --from=ghcr.io/mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
+RUN install-php-extensions \
+pdo_mysql \
+pdo_pgsql \
+pdo_sqlite \
+mbstring \
+bcmath \
+zip \
+gd \
+xdebug
+
 # Limpa cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Extencoes do PHP
-COPY --from=ghcr.io/mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
-RUN install-php-extensions gd xdebug
-RUN install-php-extensions pdo pdo_mysql pdo_pgsql pdo_sqlite mbstring bcmath zip gd
-
 # Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer -o composer-setup.php \
+    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
+    && rm composer-setup.php
 
 WORKDIR /var/www
