@@ -24,7 +24,7 @@ services:
       - php
     networks:
       - app_network
-    # restart: unless-stopped
+    restart: unless-stopped
 
   # Database: MariaDb
   db:
