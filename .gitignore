@@ -3,8 +3,10 @@
 !/data/index.php
 !/data/.gitkeep
 
+/nginx/*
+!/nginx/default.conf
 
 /php/*
 !/php/Dockerfile
 /php/public/*
-!/php/puclic/index.php
+!/php/public/index.php
