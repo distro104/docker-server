@@ -29,7 +29,7 @@ docker compose up -d
 ```
 
 ### Depois de finalizada a instalação dos componentes verifique se todos os servidores estão funcionando corretamente com o comando:
-> vdocker ps 
+> docker ps 
 
 ### Os projetos devem ser criados em diretorios separados no caminho:
 > php/public/ 
