@@ -20,6 +20,9 @@ nodejs \
 npm \
 gcc g++ make
 
+# Copia o arquivo de configuração do PHP
+COPY php.ini /usr/local/etc/php/php.ini
+
 # Extencoes do PHP
 COPY --from=ghcr.io/mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 RUN install-php-extensions \
