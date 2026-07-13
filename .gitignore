@@ -8,5 +8,6 @@
 
 /php/*
 !/php/Dockerfile
+!/php/php.ini
 /php/public/*
 !/php/public/index.php
