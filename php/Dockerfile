@@ -35,6 +35,9 @@ zip \
 gd \
 xdebug
 
+# Copia o arquivo de configuração do Xdebug
+COPY xdebug.ini /usr/local/etc/php/conf.d/99-xdebug.ini
+
 # Limpa cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
