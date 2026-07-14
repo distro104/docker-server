@@ -1,6 +1,6 @@
 # Docker-server
-### Projeto com o objetivo de disponibilizar servicos de PHP, banco de dados MariaDb com um servidor nginx para o desenvolvimento de projetos utilizando estas tecnologias. Foi desenvolvido e testado diretamente no linux Mint e caso seja usado no windows precisara de configurações adicionais para funcionar corretamente e poderção ter novas atualizações e adaptações com o tempo.
-> Este projeto foi desenvolvido com o objetivo de treinar o uso do Docker e não deve ser utilizado em produção, somente como teste ou referência.
+### Projeto com o objetivo de disponibilizar servicos de PHP, banco de dados MariaDb com um servidor nginx para o desenvolvimento de projetos utilizando estas tecnologias. Foi desenvolvido e testado diretamente no linux Mint e caso seja usado no windows precisara de configurações adicionais para funcionar corretamente e poderão ter novas atualizações e adaptações com o tempo.
+> Este projeto foi desenvolvido com o objetivo de treinar o uso do Docker e não deve ser utilizado em produção, somente como teste no desenvolvimento de projetos ou como referência para outros.
 
 ## Tecnologias utilizadas:
 > Docker <br />
@@ -33,6 +33,12 @@ docker compose up -d
 
 ### Os projetos devem ser criados em diretorios separados no caminho:
 > php/public/ 
+
+### Para acesso ao banco de dados foi deixado como default 2 usuarios sendo um com perfil de acesso DBA e outro como usuario normal, segue abaixo dados para acesso:
+> MARIADB_ROOT_PASSWORD: secret
+> MARIADB_DATABASE: docker
+> MARIADB_USER: developer
+> MARIADB_PASSWORD: secret
 
 #### Link para acessar a pagina ja funcionando na maquina local: 
 > http://localhost

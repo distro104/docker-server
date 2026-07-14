@@ -37,8 +37,8 @@ services:
       - ./data:/var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: secret
-      MARIADB_DATABASE: laravel
-      MARIADB_USER: laravel
+      MARIADB_DATABASE: docker
+      MARIADB_USER: developer
       MARIADB_PASSWORD: secret
     networks:
       - app_network
