@@ -23,9 +23,10 @@ cd docker-server
 
 composer install
 
-docker compose build
+docker compose build --no-cache
 
 docker compose up -d
+
 ```
 
 ### Depois de finalizada a instalação dos componentes verifique se todos os servidores estão funcionando corretamente com o comando:
