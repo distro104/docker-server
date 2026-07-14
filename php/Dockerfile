@@ -33,6 +33,9 @@ mbstring \
 bcmath \
 zip \
 gd \
+intl \
+soap \
+# imagemagick \
 xdebug
 
 # Copia o arquivo de configuração do Xdebug
