@@ -9,5 +9,6 @@
 /php/*
 !/php/Dockerfile
 !/php/php.ini
+!/php/xdebug.ini
 /php/public/*
 !/php/public/index.php
