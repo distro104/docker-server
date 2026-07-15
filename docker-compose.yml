@@ -38,10 +38,10 @@ services:
     volumes:
       - mariadb_data:/var/lib/mysql
     environment:
-      MARIADB_ROOT_PASSWORD: secret
-      MARIADB_DATABASE: docker
-      MARIADB_USER: developer
-      MARIADB_PASSWORD: secret
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_USER: ${MARIADB_USER}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
     networks:
       - app_network
 

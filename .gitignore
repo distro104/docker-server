@@ -1,14 +1,32 @@
-# Config
+# =======================
+# Banco de dados
+# =======================
 /data/*
 !/data/index.php
 !/data/.gitkeep
 
+# =======================
+# Nginx
+# =======================
 /nginx/*
 !/nginx/default.conf
 
+# =======================
+# Servidor PHP
+# =======================
 /php/*
 !/php/Dockerfile
 !/php/php.ini
 !/php/xdebug.ini
 /php/public/*
 !/php/public/index.php
+
+# =======================
+# Variavel de ambiente
+# =======================
+.env
+
+# =======================
+# Logs do sistema
+# =======================
+*.log
