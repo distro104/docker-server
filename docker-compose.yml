@@ -1,6 +1,6 @@
 services:
 
-  # php
+  # PHP
   php:
     build:
       context: ./php
@@ -13,7 +13,7 @@ services:
       - app_network
     restart: unless-stopped
 
-  # server
+  # Web Server
   webserver:
     image: nginx:latest
     container_name: app_nginx
@@ -28,7 +28,7 @@ services:
       - app_network
     restart: unless-stopped
 
-  # Database: MariaDb
+  # Database
   db:
     image: mariadb:latest
     container_name: app_db
@@ -36,7 +36,7 @@ services:
       - "3306:3306"
     restart: unless-stopped
     volumes:
-      - ./data:/var/lib/mysql
+      - mariadb_data:/var/lib/mysql
     environment:
       MARIADB_ROOT_PASSWORD: secret
       MARIADB_DATABASE: docker
@@ -45,8 +45,26 @@ services:
     networks:
       - app_network
 
+  # phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: app_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: developer
+      PMA_PASSWORD: secret
+    depends_on:
+      - db
+    networks:
+      - app_network
+
 networks:
   app_network:
     driver: bridge
 
-      
+volumes:
+  mariadb_data:
