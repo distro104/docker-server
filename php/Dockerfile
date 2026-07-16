@@ -38,6 +38,10 @@ soap \
 # imagemagick \
 xdebug
 
+RUN if [ "$INSTALL_XDEBUG" = "true" ]; then \
+      install-php-extensions xdebug; \
+    fi
+
 # Copia o arquivo de configuração do Xdebug
 COPY xdebug.ini /usr/local/etc/php/conf.d/99-xdebug.ini
 

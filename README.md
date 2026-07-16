@@ -37,9 +37,17 @@ docker compose up -d
 
 ### Para acesso ao banco de dados foi deixado como default 2 usuarios sendo um com perfil de acesso DBA e outro como usuario normal, segue abaixo dados para acesso:
 > MARIADB_ROOT_PASSWORD: secret
+
 > MARIADB_DATABASE: docker
+
 > MARIADB_USER: developer
+
 > MARIADB_PASSWORD: secret
 
 #### Link para acessar a pagina ja funcionando na maquina local: 
+> php info: 
 > http://localhost
+
+
+> phpmyadmin: 
+> http://localhost:8080
