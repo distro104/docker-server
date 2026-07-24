@@ -13,7 +13,6 @@
 ```
 > git
 > docker 
-> composer
 ```
 ## Comandos:
 ### Os comandos abaixo seram utilizados para desde o download do repositorio ate a instalacao dos componentes do Docker:
@@ -41,12 +40,26 @@
 > MARIADB_USER: developer
 > MARIADB_PASSWORD: secret
 ```
-#### Link para acessar a pagina ja funcionando na maquina local: 
+### Link para acessar a pagina ja funcionando na maquina local: 
 ```
 > php info: http://localhost
 ```
 
- 
 ```
 > phpmyadmin: http://localhost:8080
+```
+
+### Acessar o composer dentro do container PHP:
+```
+> docker exec -ti app_php bash
+#### Dentro do container no diretorio www acesse a pasta do projeto e execute os comandos:
+> composer --version
+> cd [diretorio do projeto]
+> composer init
+#### Para atualizar o autoload
+> composer dump-autoload
+#### Instalar uma nova biblioteca
+> composer require [nome]/[nome]
+#### Atualizar dependencias:
+> composer update
 ```
