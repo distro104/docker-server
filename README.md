@@ -8,6 +8,7 @@
 > PHP 8.4-fpm
 > nginx - Versão mais atualizada possivel
 > MariaDb - Versão mais atualizada possivel
+> Composer
 ```
 ## Requerimentos:
 ```
