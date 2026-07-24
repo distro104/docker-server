@@ -1,8 +1,18 @@
-# Docker-server
-### Projeto com o objetivo de disponibilizar servicos de PHP, banco de dados MariaDb com um servidor nginx para o desenvolvimento de projetos utilizando estas tecnologias. Foi desenvolvido e testado diretamente no linux Mint e caso seja usado no windows precisara de configurações adicionais para funcionar corretamente e poderão ter novas atualizações e adaptações com o tempo.
-> Este projeto foi desenvolvido com o objetivo de treinar o uso do Docker e não deve ser utilizado em produção, somente como teste no desenvolvimento de projetos ou como referência para outros.
+<p align="center" style="font-size:28px">
+Docker-server
+</p>
+<hr>
 
-> ⭐ Se este projeto foi útil para você, considere deixar uma estrela (Star) no repositório. Esse pequeno gesto ajuda a divulgar o projeto, motiva a continuidade do desenvolvimento e incentiva a criação de novos conteúdos. Obrigado pelo apoio!
+<p align="justify" style="font-size:18px">
+Projeto com o objetivo de disponibilizar servicos de PHP, banco de dados MariaDb com um servidor nginx para o desenvolvimento de projetos utilizando estas tecnologias. Foi desenvolvido e testado diretamente no linux Mint e caso seja usado no windows precisara de configurações adicionais para funcionar corretamente e poderão ter novas atualizações e adaptações com o tempo.
+Este projeto foi desenvolvido com o objetivo de treinar o uso do Docker e não deve ser utilizado em produção, somente como teste no desenvolvimento de projetos ou como referência para outros.
+</p>
+
+<p align="center" style="font-size:20px; border:1px solid; padding: 5px;">
+>> ⭐ << 
+<br />
+Se este projeto foi útil para você, considere deixar uma estrela (Star) no repositório. Esse pequeno gesto ajuda a divulgar o projeto, motiva a continuidade do desenvolvimento e incentiva a criação de novos conteúdos. Obrigado pelo apoio!
+</p>
 
 ## Tecnologias utilizadas:
 ```
